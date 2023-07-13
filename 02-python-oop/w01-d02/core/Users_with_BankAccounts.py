@@ -1,4 +1,4 @@
-from BankAccount import Bankaccount
+from BankACCOUNT import BankAccount
 class User:
     def __init__(self, name, email):
         self.name = name
@@ -6,7 +6,7 @@ class User:
         self.accounts = []
     # other methods
     def create_account(self, int_rate, balance=0):
-        account = Bankaccount(int_rate, balance)
+        account = BankAccount(int_rate, balance)
         self.accounts.append(account)
     def make_deposit(self,amount,account_number):
         if account_number < len(self.accounts):
