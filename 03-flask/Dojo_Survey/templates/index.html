@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(to right,#000428  , #004e92);
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 40px;
+            box-shadow: 5px 5px 20px rgb(0,123,255) ;
+            background-image: linear-gradient(to right,#000428  , #004e92);
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #007bffa7;
+            font-weight: bold;
+        }
+        .btn-submit {
+            margin-top: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dojo Survey</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Dojo Location:</label>
+                <select class="form-control" id="location" name="location" required>
+                    <option value="">Select Location</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="New York">New York</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="New Orleans">New Orleans</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="language">Favorite Language:</label>
+                <select class="form-control" id="language" name="language" required>
+                    <option value="">Select Language</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="C#">C#</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment (optional):</label>
+                <textarea class="form-control" id="comment" name="comment" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

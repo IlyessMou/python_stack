@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(to right,#000428  , #004e92);
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+            padding: 20px;
+            background-image: linear-gradient(to right,#000428  , #004e92);
+            border-radius: 30px;
+            box-shadow: 5px 5px 20px rgb(0,123,255) ;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #007bff;
+            text-shadow: 4px 4px 10px rebeccapurple;
+            text-decoration: overline;
+        }
+        .result-item {
+            margin-bottom: 10px;
+            color: white;
+        }
+        .result-item strong {
+            color: #007bffa7;
+        }
+        .btn-back {
+            margin-top: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Submitted info</h1>
+        <div class="result-item">
+            <strong>Your Name:</strong> {{ name }}
+        </div>
+        <div class="result-item">
+            <strong>Dojo Location:</strong> {{ location }}
+        </div>
+        <div class="result-item">
+            <strong>Favorite Language:</strong> {{ language }}
+        </div>
+        <div class="result-item">
+            <strong>Comment (optional):</strong> {{ comment }}
+        </div>
+        <a href="/" class="btn btn-primary btn-back">Back to Form</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
