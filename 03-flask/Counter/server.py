@@ -1,9 +1,7 @@
-# app.py
 from flask import Flask, render_template, session, redirect, url_for, request
-import os
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)  # Generate a random secret key
+app.secret_key = "secret_key" 
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
