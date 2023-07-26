@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table_head{
+            background-color: rgb(52,58,63);
+            color: rgb(254,191,8);
+        }
+        th,td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        tr:hover {
+            background-color: #f2f2f2;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table_head">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Full Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.first_name }}</td>
+                        <td>{{ user.last_name }}</td>
+                        <td>{{ user.first_name }} {{ user.last_name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect,session
 
 app=Flask(__name__)
 
@@ -10,7 +10,7 @@ def index():
 def process():
     print("*"*20, "PROCESS-FORM RECEIVED","*"*20)
     print(("-"*20, request.form,"-"*20))
-    print(f"USERNAME: {request.form['username']}")
+    print(f"USERNAME: {request.form['username']}\nAGE : {request.form}")
 
     return None
 
